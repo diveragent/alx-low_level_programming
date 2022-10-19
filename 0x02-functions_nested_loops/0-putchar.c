@@ -1,17 +1,12 @@
-#include "main.h"
+#include <main.h>
+#include <unistd.h>
+
 /**
- * main - Entry point
+ * main -Entry point of the program
  *
- * Return: always 0(Success)
+ * Return: Always 0 (Success)
  */
-int main(void)
+int _putchar(char c)
 {
-	char str[] = "_putchar";
-	int ch;
-
-	for (ch = 0; ch < 8; ++ch)
-		_putchar(str[ch]);
-	_putchar('\n');
-
-	return (0);
+	return (write(1, &c, 1));
 }
